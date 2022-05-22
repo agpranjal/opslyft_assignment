@@ -30,6 +30,7 @@ This "created_at" helps in determining if 6hrs have passed since the record crea
 ## 1. Creating an IAM role
 
 - Create an AWS IAM role for a lambda function and attach the three policies created above
+- Also attach the policy "AWSLambdaBasicExecutionRole" to the role
 - Name the role as "lambda-permissions-role" and create
 
 ## 2. Creating the lambda function
