@@ -35,8 +35,10 @@ This "created_at" helps in determining if 6hrs have passed since the record crea
 
 ## 2. Creating the lambda function
 
-- Create an AWS lambda function and attach the above created IAM role to it. Make sure to select "Author from scratch" and name it as "monitorEC2Tags"
-- Head over to lambda functions dashboard and and paste the code in src/main.py to index.js file
+- Create an AWS lambda function and attach the above created IAM role to it (under Execution Role section). Make sure to select "Author from scratch" and name it as "monitorEC2Tags"
+- Choose runtime as "Python 3.9"
+- Head over to lambda functions' dashboard and and paste the code in src/main.py to lambda functions' lambda_function.py file
+- Change the timeout of the lambda function to 15 minutes from "Configuration->General Configuration" Tab
 - Add the following environment variables for the lambda function in the Configuration tab.
 
 Key: `SENDER_EMAIL_ADDRESS`

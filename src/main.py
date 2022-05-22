@@ -78,7 +78,7 @@ def terminate_instances_after_six_hours():
         owner_email = item["email"]
         hours_elapsed = ((datetime.now() - date).total_seconds())/(60*60)
         
-        if hours_elapsed >= 0:
+        if hours_elapsed >= 6:
             instance = get_instance_by_id(instances, instance_id)
             missing_tags = get_missing_tags(instance)
             
